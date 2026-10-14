@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sassá Vintage - Catálogo de Fotos</title>
+<style>
+body{font-family:Arial, sans-serif; background:#faf7f2; color:#222; max-width:900px; margin:40px auto; padding:20px}
+h1{color:#b14a28} .folder{background:#fff; border:1px solid #ddd; border-radius:12px; padding:16px; margin:12px 0; display:flex; justify-content:space-between; align-items:center}
+a{color:#b14a28; text-decoration:none; font-weight:bold} a:hover{text-decoration:underline}
+.badge{background:#f3e9e0; padding:4px 10px; border-radius:20px; font-size:12px}
+small{color:#888}
+</style>
+</head>
+<body>
+<h1>📦 Sassá Vintage - sassa-catalogo</h1>
+<p>Repositório oficial de fotos para o catálogo Meta. Total: <b>259 produtos</b> em 16 categorias.</p>
+<p><small>Base URL: https://sassavintage.github.io/sassa-catalogo/</small></p>
+<p style="background:#fff3cd; padding:12px; border-radius:8px">✅ Se você está vendo esta página, o GitHub Pages está funcionando. Os links diretos das imagens já podem ser usados no Gerenciador de Comércio da Meta.</p>
+
+<div id="folders"></div>
+
+<script>
+const folders = [
+["01-bonecos-action-figure","Bonecos/Action Figure",11],
+["02-miniaturas-carrinhos","Miniaturas/Carrinhos",38],
+["03-gibis-hqs-almanaques","Gibis/HQs/Almanaques",37],
+["04-livros-manuais-tecnicos","Livros/Manuais técnicos",42],
+["05-livros-diversos","Livros - Religião/Autoajuda/Diversos",28],
+["06-pecas-automotivas","Peças Automotivas",20],
+["07-vinil-lp-musica","Vinil/LP/Música",20],
+["08-porcelana-utensilios","Porcelana/Utensílios de casa",19],
+["09-filmes-dvd","Filmes (DVD)",11],
+["10-revistas","Revistas",9],
+["11-brinquedos-montar","Brinquedos de montar/diversos",7],
+["12-jogos-tabuleiro","Jogos de Tabuleiro",5],
+["13-brindes-colecionaveis","Brindes/Colecionáveis Promocionais",4],
+["14-outros-diversos","Outros/Diversos",4],
+["15-eletronicos-cameras","Eletrônicos/Câmeras",3],
+["16-esportes-pesca","Esportes/Pesca",1],
+];
+const c = document.getElementById('folders');
+folders.forEach(f=>{
+ c.innerHTML += `<div class="folder"><div><a href="./${f[0]}/">${f[0]}</a><br><small>${f[1]}</small></div><span class="badge">${f[2]} produtos</span></div>`;
+});
+</script>
+
+<h3>Como usar no catálogo:</h3>
+<pre style="background:#fff; padding:12px; border-radius:8px; overflow:auto">https://sassavintage.github.io/sassa-catalogo/01-bonecos-action-figure/SASSA-0001_01_frente.jpg</pre>
+</body>
+</html>
